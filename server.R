@@ -16,19 +16,22 @@ server = function(input, output) {
     summary(df$VALOR)
     q_primeiro <- quantile(df$VALOR)[2]
     q_terceiro <- quantile(df$VALOR)[4]
+    media_geometrica <- gm_mean(df$VALOR)
     
-    l_linhas <- paste("<tr><td width='50%' align='right'>Quantidade linhas:</td><td width='50%'>&nbsp;&nbsp;&nbsp;", format_numero(qtd_linhas),"</td></tr>")
-    l_municipios <- paste("<tr><td align='right'>Quantidade Muncípios:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(qtd_municipios),"</td></tr>")
-    l_mediana <- paste("<tr><td align='right'>Mediana:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(mediana),"</td></tr>")
-    l_media <- paste("<tr><td align='right'>Média:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(media),"</td></tr>")
-    l_desvio_padrao <- paste("<tr><td align='right'>Desvio Padrão:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(desvio_padrao),"</td></tr>")
-    l_minimo <- paste("<tr><td align='right'>Valor Mínimo:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(minimo),"</td></tr>")
-    l_maximo <- paste("<tr><td align='right'>Valor Mínimo:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(maximo),"</td></tr>")
-    l_q_primeiro <- paste("<tr><td align='right'>Primeiro Quantil:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(q_primeiro),"</td></tr>")
+    l_linhas <- paste("<tr><td width='25%' align='right'>Quantidade linhas:</td><td width='25%'>&nbsp;&nbsp;&nbsp;", format_numero(qtd_linhas),"</td>")
+    l_municipios <- paste("<td width='25%' align='right'>Quantidade Muncípios:</td><td width='25%'>&nbsp;&nbsp;&nbsp;", format_numero(qtd_municipios),"</td></tr>")
+    l_mediana <- paste("<tr><td align='right'>Mediana:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(mediana),"</td>")
+    l_media <- paste("<td align='right'>Média:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(media),"</td></tr>")
+    l_desvio_padrao <- paste("<tr><td align='right'>Desvio Padrão:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(desvio_padrao),"</td>")
+    l_minimo <- paste("<td align='right'>Valor Mínimo:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(minimo),"</td></tr>")
+    l_maximo <- paste("<tr><td align='right'>Valor Mínimo:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(maximo),"</td>")
+    l_q_primeiro <- paste("<td align='right'>Primeiro Quantil:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(q_primeiro),"</td></tr>")
     l_q_terceiro <- paste("<tr><td align='right'>Terceiro Quantil:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(q_terceiro),"</td></tr>")
+    l_q_terceiro <- paste("<tr><td align='right'>Terceiro Quantil:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(q_terceiro),"</td>")
+    l_media_geometrica <- paste("<td align='right'>Média Geométrica:</td><td>&nbsp;&nbsp;&nbsp;", format_numero(media_geometrica),"</td></tr>")
   
     
-    l_final <- paste("<table width='100%'>",
+    l_final <- paste("<table width='100%' border=1>",
                      l_linhas, 
                      l_municipios, 
                      l_mediana,
@@ -38,6 +41,7 @@ server = function(input, output) {
                      l_maximo,
                      l_q_primeiro,
                      l_q_terceiro,
+                     l_media_geometrica,
                      "</table><p>&nbsp;</p>")
     
     
@@ -70,10 +74,7 @@ server = function(input, output) {
   
   output$graficoBoxPlot1 = renderPlotly({
     
-    
-    
-    
-    fig <- plot_ly(y = df$VALOR, type = "box")
+    fig <- plot_ly(data=df, y = ~VALOR, type = "box")
     fig <- fig %>% layout(title = 'Boxplot - com OutLiers')
     fig
     
