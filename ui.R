@@ -2,12 +2,12 @@
 # PAINEL DINÂMICO - ui.R
 #
 
-ui <- dashboardPagePlus(
+ui <- dashboardPage(
   
   skin = "blue",
   title = "Painel Dinâmico v0.1",
   
-  dashboardHeaderPlus(
+  dashboardHeader(
     
     title = "Painel Din?mico 0.1"
     

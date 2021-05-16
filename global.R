@@ -32,7 +32,7 @@ library("shiny")
 library("dplyr")
 library("plotly")
 library("shinydashboard")
-library("shinydashboardPlus")
+#library("shinydashboardPlus")
 library("leaflet")
 library("data.table")
 
