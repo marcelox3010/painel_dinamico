@@ -1,5 +1,5 @@
 #
-# PAINEL DIN¬MICO - global.R
+# PAINEL DIN√¢MICO - global.R
 #
 
 #
@@ -9,7 +9,7 @@
 
 
 #
-# PACOTES NECESS¡RIOS
+# PACOTES NECESS√ÅRIOS
 #
 
 # install.packages("tidyverse")
@@ -37,14 +37,14 @@ library("leaflet")
 library("data.table")
 
 #
-# OP«’ES
+# OP??ES
 #
 
 
 options(scipen = 0)
 
 #
-# FUN«’ES EXTRAS
+# FUN√á√ïES EXTRAS
 #
 
 format_numero <- function(x) {
