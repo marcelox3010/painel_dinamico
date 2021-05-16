@@ -1,5 +1,5 @@
 #
-# PAINEL DIN¬MICO - server.R
+# PAINEL DIN√ÇMICO - server.R
 #
 
 server = function(input, output) { 
@@ -33,7 +33,7 @@ server = function(input, output) {
   })
   
   #
-  # TELA - ESTATÕSTICAS B¡SICAS - V1
+  # TELA - ESTAT√çSTICAS B√ÅSICAS - V1
   #
   
   output$qtd_linhas_v1 = reactive({ 
@@ -48,7 +48,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(length(unique(df$cod_ibge)))
-    return(paste("Qtd. de MunicÌpios ⁄nicos: ",qtd))
+    return(paste("Qtd. de Munic?pios ?nicos: ",qtd))
     
   })
   
@@ -64,7 +64,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(mean(df$var1))
-    return(paste("MÈdia: ",qtd))
+    return(paste("M?dia: ",qtd))
     
   })
   
@@ -72,7 +72,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(sd(df$var1))
-    return(paste("Desvio Padr„o: ",qtd))
+    return(paste("Desvio Padr?o: ",qtd))
     
   })
   
@@ -80,7 +80,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(sd(df$var1))
-    return(paste("MÌnimo: ",qtd))
+    return(paste("M?nimo: ",qtd))
     
   })
   
@@ -88,7 +88,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(max(df$var1))
-    return(paste("M·ximo: ",qtd))
+    return(paste("M?ximo: ",qtd))
     
   })
   
@@ -112,7 +112,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(gm_mean(df$var1))
-    return(paste("MÈdia geomÈtrica: ",qtd))
+    return(paste("M?dia geom?trica: ",qtd))
     
   })
   
@@ -134,7 +134,7 @@ server = function(input, output) {
   
   output$titulo_estatistica_basica_v1 =  renderUI({ 
     
-    HTML("<div style='text-align:center'><h1>EstatÌstica B·sica - Vari·vel 1</h1></div>")
+    HTML("<div style='text-align:center'><h1>Estat?stica B?sica - Vari?vel 1</h1></div>")
     
   })
   
@@ -159,12 +159,12 @@ server = function(input, output) {
   
   output$titulo_estatistica_basica_v2 =  renderUI({
     
-    HTML("<div style='text-align:center'><h1>EstatÌstica B·sica - Vari·vel 2</h1></div>")
+    HTML("<div style='text-align:center'><h1>Estat?stica B?sica - Vari?vel 2</h1></div>")
     
   })
   
   #
-  # TELA - ESTATÕSTICAS B¡SICAS - V2
+  # TELA - ESTAT?STICAS B?SICAS - V2
   #
   
   output$qtd_linhas_v2 = reactive({ 
@@ -179,7 +179,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(length(unique(df$cod_ibge)))
-    return(paste("Qtd. de MunicÌpios ⁄nicos: ",qtd))
+    return(paste("Qtd. de Munic?pios ?nicos: ",qtd))
     
   })
   
@@ -195,7 +195,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(mean(df$var2))
-    return(paste("MÈdia: ",qtd))
+    return(paste("M?dia: ",qtd))
     
   })
   
@@ -203,7 +203,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(sd(df$var2))
-    return(paste("Desvio Padr„o: ",qtd))
+    return(paste("Desvio Padr?o: ",qtd))
     
   })
   
@@ -211,7 +211,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(sd(df$var2))
-    return(paste("MÌnimo: ",qtd))
+    return(paste("M?nimo: ",qtd))
     
   })
   
@@ -219,7 +219,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(max(df$var2))
-    return(paste("M·ximo: ",qtd))
+    return(paste("M?ximo: ",qtd))
     
   })
   
@@ -243,7 +243,7 @@ server = function(input, output) {
     
     df <- getFileData()
     qtd <- format_numero(gm_mean(df$var2))
-    return(paste("MÈdia geomÈtrica: ",qtd))
+    return(paste("M?dia geom?trica: ",qtd))
     
   })
   
@@ -265,7 +265,7 @@ server = function(input, output) {
   
   output$titulo_estatistica_basica_v2 =  renderUI({ 
     
-    HTML("<div style='text-align:center'><h1>EstatÌstica B·sica - Vari·vel 2</h1></div>")
+    HTML("<div style='text-align:center'><h1>Estat?stica B?sica - Vari?vel 2</h1></div>")
     
   })
   
@@ -279,7 +279,7 @@ server = function(input, output) {
   })
   
   #
-  # TELA - ESTATÕSTICAS B¡SICAS - CAT
+  # TELA - ESTAT?STICAS B?SICAS - CAT
   #
   
   output$qtd_cat = reactive({ 

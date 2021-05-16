@@ -1,25 +1,26 @@
 #
-# PAINEL DINÂMICO - ui.R
+# PAINEL DINÃ‚MICO - ui.R
 #
 
 ui <- dashboardPagePlus(
   
   skin = "blue",
-  title = "Painel Dinâmico v0.1",
+  title = "Painel DinÃ¢mico v0.1",
   
   dashboardHeaderPlus(
     
-    title = "Painel Dinâmico 0.1"
+    title = "Painel Din?mico 0.1"
     
   ),
   
   dashboardSidebar(
     
     sidebarMenu(id="sbmenu",
+                
                 menuItem(tabName = "arquivo", text = "Arquivo", icon = icon("file-alt")),
-                menuItem(tabName = "tab1", text = "Estatísticas Básicas - V1", icon = icon("calculator")),
-                menuItem(tabName = "tab2", text = "Estatísticas Básicas - V2", icon = icon("calculator")),
-                menuItem(tabName = "tab3", text = "Estatísticas Básicas - CAT", icon = icon("calculator")),
+                menuItem(tabName = "tab1", text = "EstatÃ­sticas BÃ¡sicas - V1", icon = icon("calculator")),
+                menuItem(tabName = "tab2", text = "EstatÃ­sticas BÃ¡sicas - V2", icon = icon("calculator")),
+                menuItem(tabName = "tab3", text = "EstatÃ­sticas BÃ¡sicas - CAT", icon = icon("calculator")),
                 menuItem(tabName = "tab4", text = "V1 x V2 x CAT", icon = icon("calculator")))
     
   ),
@@ -43,14 +44,14 @@ ui <- dashboardPagePlus(
         
         tabName = "tab1",
         
-        # ESTATÍSTICA BÁSICA
+        # ESTATÃSTICA BÃSICA
         column(12,
                
                htmlOutput("titulo_estatistica_basica_v1")
                
         ),
         
-        # ESTATISTICA BÁSICA
+        # ESTATÃSTICA BÃSICA
         column(2,
                
                wellPanel(textOutput("qtd_linhas_v1"), style = "background: #00BFFF; color:white; height:100px")
@@ -126,14 +127,14 @@ ui <- dashboardPagePlus(
         
         tabName = "tab2",
         
-        # ESTATÍSTICA BÁSICA
+        # ESTATÃSTICA BÃSICA
         column(12,
                
                htmlOutput("titulo_estatistica_basica_v2")
                
         ),
         
-        # ESTATISTICA BÁSICA
+        # ESTATÃSTICA BÃSICA
         column(2,
                
                wellPanel(textOutput("qtd_linhas_v2"), style = "background: #00BFFF; color:white; height:100px")
