@@ -9,7 +9,7 @@ ui <- dashboardPage(
   
   dashboardHeader(
     
-    title = "Painel Din?mico 0.1"
+    title = "Painel Dinâmico 0.1"
     
   ),
   

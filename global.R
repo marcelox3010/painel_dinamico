@@ -18,7 +18,6 @@
 # install.packages("dplyr")
 # install.packages("plotly")
 # install.packages("shinydashboard")
-# install.packages("shinydashboardPlus")
 # install.packages("leaflet")
 # install.packages("data.table")
 
@@ -32,7 +31,6 @@ library("shiny")
 library("dplyr")
 library("plotly")
 library("shinydashboard")
-#library("shinydashboardPlus")
 library("leaflet")
 library("data.table")
 
