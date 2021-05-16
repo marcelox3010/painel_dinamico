@@ -134,7 +134,7 @@ server = function(input, output) {
   
   output$titulo_estatistica_basica_v1 =  renderUI({ 
     
-    HTML("<div style='text-align:center'><h1>Estatística Básica - Vari?vel 1</h1></div>")
+    HTML("<div style='text-align:center'><h1>Estatística Básica - Variável 1</h1></div>")
     
   })
   
